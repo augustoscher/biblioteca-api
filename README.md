@@ -9,8 +9,8 @@
 - Docker deve estar instalado.
 - Maven pode estar instalado (opcional).
 
-
-#### Setting Up 
+  
+### Setting Up 
 ----
 
 ##### 1. Clonar repositório  
@@ -39,5 +39,6 @@ ou
 ##### 6. Testar API
 > http://localhost:8282/v2/api-docs
 
-----
+  
 ### Configuração Tenant
+----
