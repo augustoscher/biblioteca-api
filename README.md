@@ -5,8 +5,7 @@
 * Rest-Api - Biblioteca
 * 0.1.0
 
-
-####a) Setting Up ####
+#### a) Setting Up 
 
 ----
 ##### Pré-requisitos:  
@@ -37,6 +36,7 @@ b) Através do Docker
 ----
 ##### Testar database  
 > docker-compose exec db psql -U postgres -f /scripts/check.sql  
+
 ou  
 > docker-compose exec db psql -U postgres biblioteca -c "SELECT * FROM usuario;"  
 
@@ -45,4 +45,4 @@ ou
 > http://localhost:8282/v2/api-docs
 
 
-###b) Configuração Tenant ###
+### b) Configuração Tenant
