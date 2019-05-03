@@ -1,0 +1,23 @@
+version: '3'
+volumes:
+   data:
+services:
+  db:
+    image: postgres:10.4
+    container_name: biblioteca-api-db
+    volumes:
+      # Volume dos dados
+      - data:/var/lib/postgresql/data
+      - ./scripts:/scripts
+    environment:
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=biblioteca
+  backend:
+    container_name: biblioteca-api-backend
+    image: augustoscher/biblioteca-api:0.0.1
+    ports:
+      - 8282:8282
+    depends_on:
+      - db
+      

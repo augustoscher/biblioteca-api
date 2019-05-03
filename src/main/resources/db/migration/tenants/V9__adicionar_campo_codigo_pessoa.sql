@@ -1,0 +1,1 @@
+alter table pessoa add column codigo varchar(100);

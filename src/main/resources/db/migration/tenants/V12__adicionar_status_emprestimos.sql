@@ -1,0 +1,1 @@
+alter table emprestimo add column status smallint;
