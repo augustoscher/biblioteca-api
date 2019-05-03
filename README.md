@@ -5,23 +5,23 @@
 * Rest-Api - Biblioteca
 * 0.1.0
 
-#### a) Setting Up 
-
-----
 ##### Pré-requisitos:  
 - Docker deve estar instalado.
 - Maven pode estar instalado (opcional).
 
+
+#### Setting Up 
+
 ----
-##### Clonar repositório  
+##### 1. Clonar repositório  
 > git clone git@bitbucket.org:augustoscher/biblioteca-api.git  
 
 ----
-##### Acessar repositório
+##### 2. Acessar repositório
 > cd biblioteca-api  
 
 ----
-##### Imagem Docker
+##### 3. Imagem Docker
 
 a) Através do Maven
 > mvn clean package dockerfile:build  
@@ -30,19 +30,19 @@ b) Através do Docker
 > docker build -t augustoscher/biblioteca-api:0.0.1 .  
 
 ----
-##### Iniciar aplicação  
+##### 4. Iniciar aplicação  
 > docker-compose up -d  
 
 ----
-##### Testar database  
+##### 5. Testar database  
 > docker-compose exec db psql -U postgres -f /scripts/check.sql  
 
 ou  
 > docker-compose exec db psql -U postgres biblioteca -c "SELECT * FROM usuario;"  
 
 ----
-##### Testar API
+##### 6. Testar API
 > http://localhost:8282/v2/api-docs
 
 
-### b) Configuração Tenant
+### Configuração Tenant
