@@ -14,7 +14,7 @@
 ----
 
 ##### 1. Clonar repositório  
-> git clone git@bitbucket.org:augustoscher/biblioteca-api.git  
+> git clone git@github.com:augustoscher/biblioteca-api.git
 
 ##### 2. Acessar repositório
 > cd biblioteca-api  
