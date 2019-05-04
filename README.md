@@ -7,7 +7,8 @@
 
 ##### Pré-requisitos:  
 - Docker deve estar instalado.
-- Maven pode estar instalado (opcional).
+- Apache Maven deve estar instalado.
+- Postman deve estar instaldo. (para execução de testes)
 
   
 ### Setting Up 
@@ -20,11 +21,14 @@
 > cd biblioteca-api  
 
 ##### 3. Imagem Docker
+a) Gerar .jar
+> mvn install
 
-a) Através do Maven
+b) Através do Maven
 > mvn clean package dockerfile:build  
 
-b) Através do Docker
+ou
+c) Através do Docker
 > docker build -t augustoscher/biblioteca-api:0.0.1 .  
 
 ##### 4. Iniciar aplicação  
@@ -40,5 +44,16 @@ ou
 > http://localhost:8282/v2/api-docs
 
   
-### Configuração Tenant
+### Configurações
 ----
+
+##### 1. Fazer login
+a) Através do Postman, criar uma nova requisição POST  
+> localhost:8282/login  
+
+Body:
+>```{"login": "usera", "senha": "./augusto"}```
+
+b) Guardar access token
+>```{"access_token":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyYSIsImV4cCI6MTU1NzAyNjk2Nn0.5HtKQlsIhj1zdM0O1U0uLShLpQ6T7MNRQSrFcv73hDbQ1C4FM9tm_l9yHVoUMLqAWpSCHt7UCJ99hZgcInznRA","tenant":""}```
+
